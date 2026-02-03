@@ -1,0 +1,45 @@
+<resources>
+
+    <!--dialog no background android:windowSoftInputMode属性 https://medium.com/geekculture/android-full-screen-dialogfragment-1410dbd96d37 -->
+    <style name="dialogNoBackgroundFullScreen" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <!--dialog no background android:windowSoftInputMode属性 https://blog.csdn.net/Android_Mnbvcxz/article/details/53558495 -->
+    <style name="dialogNobackground" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+<!--https://stackoverflow.com/questions/46467776/display-dialogfragment-content-below-status-bar-->
+    <style name="dialogNobackground2" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+
+
+</resources>

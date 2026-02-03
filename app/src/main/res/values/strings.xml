@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">英文字典彙整</string>
+    <string name="open">開啟</string>
+    <string name="error_empty_input_field">輸入框為空，請輸入英文單字</string>
+</resources>

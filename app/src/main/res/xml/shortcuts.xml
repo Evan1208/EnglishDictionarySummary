@@ -1,0 +1,55 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">>
+    <!-- Add shortcuts that launch your app to a specific screen or task. -->
+    <!-- Learn more at https://developer.android.com/guide/topics/ui/shortcuts/creating-shortcuts -->
+    <!-- <shortcut android:shortcutId="SHORTCUT_ID" -->
+    <!--     android:enabled="true" -->
+    <!--     android:shortcutShortLabel="SHORTCUT_SHORT_LABEL" -->
+    <!--     android:shortcutLongLabel="SHORTCUT_LONG_LABEL" -->
+    <!--     android:shortcutDisabledMessage="SHORTCUT_DISABLED_MESSAGE"> -->
+    <!--     <intent -->
+    <!--         android:action="android.intent.action.VIEW" -->
+    <!--         android:targetClass="REPLACE_IT_WITH_FULL_QUALIFIED_CLASS" -->
+    <!--         android:targetPackage="REPLACE_IT_WITH_TARGET_PACKAGE" /> -->
+    <!-- </shortcut> -->
+
+    <!-- Integrate with Google Assistant App Actions for launching your app with various voice commands. -->
+    <!-- Learn more at: https://developers.google.com/assistant/app/overview -->
+    <!-- <capability android:name="actions.intent.OPEN_APP_FEATURE"> -->
+    <!--     Provide query fulfillment instructions for this capability, or bind it to a shortcut. -->
+    <!--     Learn more at: https://developers.google.com/assistant/app/action-schema -->
+    <!-- </capability> -->
+<!-- 參考 https://github.com/actions-on-google/app-actions-dynamic-shortcuts/blob/master/app/src/main/res/xml/shortcuts.xml-->
+    <capability android:name="actions.intent.GET_THING">
+        <intent
+            android:targetClass="com.evan.englishSearch.MainActivity"
+            android:targetPackage="com.evan.englishSearch">
+            <parameter
+                android:name="thing.name"
+                android:key="query" />
+        </intent>
+    </capability>
+
+    <shortcut
+        android:enabled="false"
+        android:shortcutId="active_tasks"
+        android:shortcutShortLabel="@string/open">
+        <capability-binding android:key="actions.intent.OPEN_APP_FEATURE">
+            <parameter-binding
+                android:key="feature"
+                android:value="@array/active_tasks_synonyms" />
+        </capability-binding>
+    </shortcut>
+
+    <!-- You may go ahead and add more intents if you want -->
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.evan.englishSearch.MainActivity"
+            android:targetPackage="com.evan.englishSearch">
+            <parameter
+                android:name="feature"
+                android:key="feature" />
+        </intent>
+    </capability>
+</shortcuts>

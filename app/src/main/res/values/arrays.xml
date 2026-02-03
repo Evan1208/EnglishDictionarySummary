@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="active_tasks_synonyms">
+        <item>搜尋</item>
+        <item>開啟</item>
+    </array>
+</resources>
